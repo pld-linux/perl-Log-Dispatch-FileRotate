@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test": very long
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Log
-%define	pnam	Dispatch-FileRotate
+%define		pdir	Log
+%define		pnam	Dispatch-FileRotate
 Summary:	Log::Dispatch::FileRotate - log to files that archive/rotate themselves
 Summary(pl):	Log::Dispatch::FileRotate - logowanie do plików, które s± archiwizowane lub podlegaj± rotacji
 Name:		perl-Log-Dispatch-FileRotate
