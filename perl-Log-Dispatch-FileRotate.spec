@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_tests - perform "make test": very long
+%bcond_with	tests	# perform "make test": very long
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Log
@@ -17,7 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	perl-Date-Manip
 BuildRequires:	perl-Log-Dispatch
-%{?_with_tests:BuildRequires:	perl-Log-Log4perl}
+%{?with_tests:BuildRequires:	perl-Log-Log4perl}
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,7 +43,7 @@ Log::Dispatch::File zawieraj±ca dodatki.
 	< /dev/null
 %{__make}
 
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
