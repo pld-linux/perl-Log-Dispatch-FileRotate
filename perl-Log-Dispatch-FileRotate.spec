@@ -8,12 +8,12 @@
 Summary:	Log::Dispatch::FileRotate - log to files that archive/rotate themselves
 Summary(pl):	Log::Dispatch::FileRotate - logowanie do plików, które s± archiwizowane lub podlegaj± rotacji
 Name:		perl-Log-Dispatch-FileRotate
-Version:	1.10
+Version:	1.11
 Release:	1
 License:	?
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	67aa7d6f4db2f197e49df5192f45bf7d
+# Source0-md5:	40c20e7de02230a1a379ebfbfab82140
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	perl-Date-Manip
 BuildRequires:	perl-Log-Dispatch
