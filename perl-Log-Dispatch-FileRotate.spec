@@ -6,7 +6,7 @@
 %define		pdir	Log
 %define		pnam	Dispatch-FileRotate
 Summary:	Log::Dispatch::FileRotate - log to files that archive/rotate themselves
-Summary(pl.UTF-8):   Log::Dispatch::FileRotate - logowanie do plików, które są archiwizowane lub podlegają rotacji
+Summary(pl.UTF-8):	Log::Dispatch::FileRotate - logowanie do plików, które są archiwizowane lub podlegają rotacji
 Name:		perl-Log-Dispatch-FileRotate
 Version:	1.11
 Release:	1
