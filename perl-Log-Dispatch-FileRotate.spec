@@ -10,14 +10,15 @@ Summary(pl.UTF-8):	Log::Dispatch::FileRotate - logowanie do plików, które są 
 Name:		perl-Log-Dispatch-FileRotate
 Version:	1.16
 Release:	1
-License:	unknown
+License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Log/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3cd1d75510a6297df487ca016763bdbe
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Log-Dispatch-FileRotate/
 BuildRequires:	perl-Date-Manip
 BuildRequires:	perl-Log-Dispatch
 %{?with_tests:BuildRequires:	perl-Log-Log4perl}
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
