@@ -58,5 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/Log/Dispatch/*
-%{_mandir}/man3/*
+%{perl_vendorlib}/Log/Dispatch/FileRotate.pm
+%{_mandir}/man3/Log::Dispatch::FileRotate.3pm*
