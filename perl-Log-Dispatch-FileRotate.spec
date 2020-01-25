@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test": very long
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Log
 %define		pnam	Dispatch-FileRotate
 Summary:	Log::Dispatch::FileRotate - log to files that archive/rotate themselves
