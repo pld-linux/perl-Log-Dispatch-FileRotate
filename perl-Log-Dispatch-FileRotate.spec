@@ -1,24 +1,28 @@
 #
 # Conditional build:
-%bcond_with	tests	# perform "make test": very long
+%bcond_without	tests	# do not perform "make test"
 #
 %define		pdir	Log
 %define		pnam	Dispatch-FileRotate
 Summary:	Log::Dispatch::FileRotate - log to files that archive/rotate themselves
 Summary(pl.UTF-8):	Log::Dispatch::FileRotate - logowanie do plików, które są archiwizowane lub podlegają rotacji
 Name:		perl-Log-Dispatch-FileRotate
-Version:	1.19
-Release:	2
+Version:	1.38
+Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Log/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8fabfe387bb070580f7c97c18853ae25
+Source0:	https://www.cpan.org/modules/by-module/Log/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	eed7814b9d291d5f7267d578e099c102
 URL:		http://search.cpan.org/dist/Log-Dispatch-FileRotate/
 BuildRequires:	perl-Date-Manip
 BuildRequires:	perl-Log-Dispatch
-%{?with_tests:BuildRequires:	perl-Log-Log4perl}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-Path-Tiny >= 0.018
+BuildRequires:	perl-Test-Pod >= 1.41
+BuildRequires:	perl-Test-Warn
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,4 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %{perl_vendorlib}/Log/Dispatch/FileRotate.pm
-%{_mandir}/man3/Log::Dispatch::FileRotate.3pm*
+%{perl_vendorlib}/Log/Dispatch/FileRotate
+%{_mandir}/man3/Log::Dispatch::FileRotate*.3pm*
